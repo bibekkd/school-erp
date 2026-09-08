@@ -1,0 +1,31 @@
+{
+  "name": "school-erp",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev:web": "turbo run dev -F web --",
+    "db:push": "turbo run db:push -F @school-erp/db --",
+    "db:studio": "turbo run db:studio -F @school-erp/db --",
+    "db:generate": "turbo run db:generate -F @school-erp/db --",
+    "db:migrate": "turbo run db:migrate -F @school-erp/db --"
+  },
+  "dependencies": {
+    "@school-erp/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@school-erp/config": "workspace:*",
+    "@types/node": "catalog:",
+    "turbo": "^2.10.12",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@12.3.4"
+}

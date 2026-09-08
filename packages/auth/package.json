@@ -1,0 +1,24 @@
+{
+  "name": "@school-erp/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@school-erp/db": "workspace:*",
+    "@school-erp/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@school-erp/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
