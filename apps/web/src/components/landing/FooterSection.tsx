@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, ShieldCheck, CheckCircle2, Mail } from "lucide-react";
+import { Building2, ShieldCheck, CheckCircle2, Mail, MapPin } from "lucide-react";
 
 export default function FooterSection() {
   return (
@@ -43,12 +43,22 @@ export default function FooterSection() {
               </span>
             </div>
 
-            <div className="pt-2 flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <Mail className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
-              <span>Email:</span>
-              <a href="mailto:info@vexaiq.com" className="text-blue-600 dark:text-cyan-400 hover:underline">
-                info@vexaiq.com
-              </a>
+            <div className="pt-2 space-y-2 text-xs">
+              <div className="flex items-center gap-2 font-semibold text-slate-700 dark:text-slate-300">
+                <Mail className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                <span>Email:</span>
+                <a href="mailto:info@vexaiq.com" className="text-blue-600 dark:text-cyan-400 hover:underline">
+                  info@vexaiq.com
+                </a>
+              </div>
+
+              <div className="flex items-start gap-2 text-slate-600 dark:text-slate-400 leading-normal">
+                <MapPin className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0 mt-0.5" />
+                <span>
+                  <strong className="font-semibold text-slate-700 dark:text-slate-300">Address: </strong>
+                  Kohinoor complex, Bhimpur road, joykrishna bazar, Tarkeshwar, West Bengal 712410
+                </span>
+              </div>
             </div>
           </div>
 

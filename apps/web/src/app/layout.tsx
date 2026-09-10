@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${plusJakarta.variable} ${inter.variable} font-sans antialiased bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white`}>
+      <body className={`${plusJakarta.variable} ${inter.variable} font-sans antialiased bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-600 selection:text-white`}>
         <Providers>
           <div className="min-h-screen flex flex-col">
             <Navbar />

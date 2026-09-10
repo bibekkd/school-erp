@@ -18,7 +18,7 @@ export default function SocialProofSection() {
   ];
 
   return (
-    <section className="py-16 bg-white border-y border-slate-200/80 relative overflow-hidden">
+    <section className="py-16 bg-white dark:bg-slate-900 border-y border-slate-200/80 dark:border-slate-800 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
@@ -27,18 +27,18 @@ export default function SocialProofSection() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-300 transition-all text-center group hover:scale-[1.02] shadow-sm hover:shadow-md"
+                className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 hover:border-blue-300 dark:hover:border-cyan-400/50 transition-all text-center group hover:scale-[1.02] shadow-sm hover:shadow-md"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 text-blue-600 mb-4 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-cyan-400 mb-4 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
                   <IconComponent className="w-6 h-6" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 tracking-tight">
+                <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-cyan-400 tracking-tight">
                   {stat.val}
                 </div>
-                <div className="text-sm font-bold text-slate-800 mt-1">
+                <div className="text-sm font-bold text-slate-800 dark:text-slate-100 mt-1">
                   {stat.label}
                 </div>
-                <div className="text-xs text-slate-500 mt-0.5 font-medium">
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
                   {stat.desc}
                 </div>
               </div>
@@ -47,17 +47,17 @@ export default function SocialProofSection() {
         </div>
 
         {/* Board Badges Horizontal Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 shrink-0">
+        <div className="mt-12 pt-8 border-t border-slate-200/80 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 shrink-0">
             Trusted Across All Regulatory Boards:
           </span>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-3">
             {boards.map((board, idx) => (
               <div
                 key={idx}
-                className="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-2 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 transition-all cursor-default shadow-xs"
+                className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2 hover:border-blue-300 dark:hover:border-cyan-400 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-700 dark:hover:text-cyan-300 transition-all cursor-default shadow-xs"
               >
-                <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 dark:text-cyan-400" />
                 <span>{board}</span>
               </div>
             ))}

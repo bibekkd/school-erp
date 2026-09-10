@@ -142,22 +142,22 @@ export default function InformationFlowSection() {
   };
 
   return (
-    <section id="data-flow" className="py-20 bg-slate-50/70 border-t border-slate-200/80 relative overflow-hidden">
+    <section id="data-flow" className="py-20 bg-slate-50/70 dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800 transition-colors duration-300 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200/20 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200/20 dark:bg-blue-600/10 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 border border-blue-200 text-xs font-bold text-blue-700 tracking-wider uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 text-xs font-bold text-blue-700 dark:text-blue-300 tracking-wider uppercase mb-4">
             <GitBranch className="w-3.5 h-3.5" />
             CONNECTIVITY FIRST
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
             Information Should Flow Through{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-transparent bg-clip-text">the Institution.</span>
+            <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 dark:from-blue-400 dark:to-cyan-300 text-transparent bg-clip-text">the Institution.</span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
             Scroll down to watch data seamlessly flow step-by-step from initial admission to final CA financial auditing without re-keying data.
           </p>
         </div>
@@ -165,7 +165,7 @@ export default function InformationFlowSection() {
         {/* Vertical Scroll-Driven Animated Flowchart Diagram */}
         <div ref={containerRef} className="mt-16 relative">
           {/* Central Vertical Connector Base Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-12 w-1 bg-slate-200 rounded-full" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-12 w-1 bg-slate-200 dark:bg-slate-800 rounded-full" />
 
           {/* Scroll-Driven Progressive Beam Fill Line */}
           <div
@@ -206,8 +206,8 @@ export default function InformationFlowSection() {
                         isActive
                           ? "bg-blue-600 text-white ring-8 ring-blue-500/25 scale-125 shadow-lg shadow-blue-500/40"
                           : isPast
-                          ? "bg-blue-700 text-white ring-4 ring-blue-200"
-                          : "bg-white border-2 border-slate-300 text-slate-500 shadow-sm"
+                          ? "bg-blue-700 dark:bg-cyan-500 text-white ring-4 ring-blue-200 dark:ring-cyan-950"
+                          : "bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 shadow-sm"
                       }`}
                     >
                       {step.id}
@@ -218,10 +218,10 @@ export default function InformationFlowSection() {
                   <div
                     className={`w-full sm:w-[45%] p-5 sm:p-6 rounded-2xl border backdrop-blur-xl transition-all duration-500 ${
                       isActive
-                        ? "bg-white border-blue-400 shadow-xl scale-[1.03] text-slate-900"
+                        ? "bg-white dark:bg-slate-900 border-blue-400 dark:border-cyan-400 shadow-xl scale-[1.03] text-slate-900 dark:text-white"
                         : isPast
-                        ? "bg-white/90 border-slate-200 text-slate-800 shadow-sm"
-                        : "bg-white/60 border-slate-200 text-slate-500 opacity-70 hover:opacity-100"
+                        ? "bg-white/90 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 shadow-sm"
+                        : "bg-white/60 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 opacity-70 hover:opacity-100"
                     } ${
                       step.align === "left"
                         ? "sm:mr-auto sm:text-right"
@@ -242,23 +242,23 @@ export default function InformationFlowSection() {
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center ${
                           isActive
-                            ? "bg-blue-100 text-blue-700 border border-blue-200"
-                            : "bg-slate-100 text-slate-500"
+                            ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-cyan-300 border border-blue-200 dark:border-blue-800"
+                            : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
                         }`}
                       >
                         <IconComp className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-blue-700 font-bold block">
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-blue-700 dark:text-cyan-400 font-bold block">
                           {step.badge}
                         </span>
-                        <h3 className="text-base font-extrabold text-slate-900">
+                        <h3 className="text-base font-extrabold text-slate-900 dark:text-white">
                           {step.title}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-xs leading-relaxed text-slate-600 font-normal">
+                    <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-300 font-normal">
                       {step.desc}
                     </p>
                   </div>

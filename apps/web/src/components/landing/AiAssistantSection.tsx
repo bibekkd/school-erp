@@ -51,15 +51,15 @@ export default function AiAssistantSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Coming Soon Alert Banner */}
-        <div className="mb-10 p-4 rounded-2xl bg-gradient-to-r from-blue-50 via-indigo-50 to-white dark:from-blue-950/80 dark:to-slate-950 border border-blue-200 dark:border-blue-500/40 text-center flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto shadow-sm">
+        <div className="mb-10 p-4 rounded-2xl bg-gradient-to-r from-blue-50 via-indigo-50 to-white dark:from-slate-900 dark:via-blue-950/80 dark:to-slate-900 border border-blue-200 dark:border-blue-800/80 text-center flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-cyan-300 border border-blue-200 dark:border-blue-500/40 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-cyan-300 border border-blue-200 dark:border-blue-700/60 flex items-center justify-center shrink-0">
               <Clock className="w-5 h-5" />
             </div>
             <div className="text-left">
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-slate-900 dark:text-white text-sm">Future Platform Vision</span>
-                <span className="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-cyan-300 font-bold text-[10px] uppercase border border-blue-200 dark:border-blue-500/30">
+                <span className="px-2 py-0.5 rounded bg-blue-100 dark:bg-cyan-950/80 text-blue-700 dark:text-cyan-300 font-bold text-[10px] uppercase border border-blue-200 dark:border-cyan-800/60">
                   COMING SOON Q4 2026
                 </span>
               </div>
