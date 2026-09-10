@@ -2,6 +2,7 @@
 
 import { Wallet, ArrowRight, TrendingUp, CreditCard, DollarSign, PieChart, ShieldCheck } from "lucide-react";
 import InteractiveAreaChart from "./InteractiveAreaChart";
+import { MagneticContainer } from "@school-erp/ui/components/magnetic-container";
 
 export default function FinancialsSection() {
   const cashFlowPills = [
@@ -58,40 +59,51 @@ export default function FinancialsSection() {
             </div>
           </div>
 
-          {/* Right Column: Financial Dashboard Preview Card with Interactive Area Graph */}
-          <div className="lg:col-span-6">
-            <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-2xl space-y-6">
-              <div className="flex items-center justify-between border-b border-slate-200 pb-4">
-                <div>
-                  <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-blue-600" />
-                    Fee Collection Velocity
-                  </h3>
-                  <p className="text-xs text-slate-500 font-normal">Interactive Real-Time Revenue Curve (Hover Points)</p>
+          {/* Right Column: Magnetic Financial Dashboard Preview Card */}
+          <MagneticContainer className="lg:col-span-6 relative" strength={0.12} tilt={true} tiltStrength={6}>
+            {/* Outer Ambient Liquid Glow */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/25 via-cyan-300/20 to-emerald-400/25 rounded-[38px] opacity-80 blur-xl pointer-events-none" />
+
+            {/* Liquid Glassboard Outer Frame */}
+            <div className="relative rounded-[32px] bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border border-white/90 shadow-[inset_0_2px_4px_0_rgba(255,255,255,1),inset_0_-1px_3px_0_rgba(0,0,0,0.04),0_25px_60px_-15px_rgba(37,99,235,0.12),0_15px_35px_rgba(0,0,0,0.06)] overflow-hidden p-6 sm:p-8 space-y-6 transition-all">
+              <div className="flex items-center justify-between border-b border-slate-200/80 pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-blue-600" />
+                      Fee Collection Velocity
+                    </h3>
+                    <p className="text-xs text-slate-500 font-normal">Interactive Real-Time Revenue Curve (Hover Points)</p>
+                  </div>
                 </div>
-                <span className="text-xs font-bold px-2.5 py-1 rounded bg-emerald-100 text-emerald-700 border border-emerald-200">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-100/90 text-emerald-800 border border-emerald-200/80 shadow-2xs">
                   CA-Ready Status
                 </span>
               </div>
 
-              {/* 4 Stat Boxes */}
+              {/* 4 Stat Boxes with Frosted Glass Styling */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/90 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),0_4px_12px_rgba(0,0,0,0.03)] hover:scale-[1.02] transition-transform">
                   <span className="text-xs text-slate-500 block font-medium">Fee Collected</span>
                   <div className="text-2xl font-extrabold text-slate-900 mt-1">₹42.6L</div>
                   <span className="text-[10px] text-emerald-600 font-semibold">+18% vs last term</span>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/90 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),0_4px_12px_rgba(0,0,0,0.03)] hover:scale-[1.02] transition-transform">
                   <span className="text-xs text-slate-500 block font-medium">Outstanding Dues</span>
                   <div className="text-2xl font-extrabold text-amber-600 mt-1">₹18.4L</div>
                   <span className="text-[10px] text-slate-500 font-medium">Auto notices queued</span>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/90 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),0_4px_12px_rgba(0,0,0,0.03)] hover:scale-[1.02] transition-transform">
                   <span className="text-xs text-slate-500 block font-medium">Operating Income</span>
                   <div className="text-2xl font-extrabold text-blue-600 mt-1">₹1.20Cr</div>
                   <span className="text-[10px] text-slate-500 font-medium">Annual budget</span>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/90 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),0_4px_12px_rgba(0,0,0,0.03)] hover:scale-[1.02] transition-transform">
                   <span className="text-xs text-slate-500 block font-medium">Expenses & Payroll</span>
                   <div className="text-2xl font-extrabold text-rose-600 mt-1">₹76L</div>
                   <span className="text-[10px] text-slate-500 font-medium">Fully reconciled</span>
@@ -99,7 +111,7 @@ export default function FinancialsSection() {
               </div>
 
               {/* Interactive Area Graph (Light Mode) */}
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <div className="p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/90 shadow-[inset_0_1.5px_2px_0_rgba(255,255,255,0.9),0_4px_12px_rgba(0,0,0,0.03)] space-y-2">
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="font-bold text-slate-900">Daily POS & Ledger Collection Trend</span>
                   <span className="text-blue-600 text-[11px] font-mono font-semibold">Live Cursor Tracking</span>
@@ -107,7 +119,7 @@ export default function FinancialsSection() {
                 <InteractiveAreaChart height={200} colorScheme="blue" isDark={false} />
               </div>
             </div>
-          </div>
+          </MagneticContainer>
         </div>
       </div>
     </section>
