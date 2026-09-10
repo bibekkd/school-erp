@@ -1,1 +1,52 @@
 @import "@school-erp/ui/globals.css";
+
+:root {
+  --font-sans: var(--font-plus-jakarta), var(--font-inter), sans-serif;
+}
+
+@layer utilities {
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+  }
+  .bg-radial-blue-card {
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, rgba(15, 23, 42, 0.6) 100%);
+  }
+  .bg-grid-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .bg-grid-dark {
+    background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .blue-glow-box {
+    box-shadow: 0 0 50px -10px rgba(37, 99, 235, 0.3);
+  }
+  .cyan-glow-box {
+    box-shadow: 0 0 40px -8px rgba(6, 182, 212, 0.35);
+  }
+  .glass-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-white {
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .border-glow-blue {
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+  }
+}
