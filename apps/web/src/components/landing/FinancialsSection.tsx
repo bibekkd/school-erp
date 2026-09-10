@@ -65,48 +65,48 @@ export default function FinancialsSection() {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/25 via-cyan-300/20 to-emerald-400/25 rounded-[38px] opacity-80 blur-xl pointer-events-none" />
 
             {/* Liquid Glassboard Outer Frame */}
-            <div className="relative rounded-[32px] bg-white/80 dark:bg-slate-900/85 backdrop-blur-2xl backdrop-saturate-150 border border-white/90 dark:border-slate-800 shadow-[inset_0_2px_4px_0_rgba(255,255,255,1),inset_0_-1px_3px_0_rgba(0,0,0,0.04),0_25px_60px_-15px_rgba(37,99,235,0.12),0_15px_35px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden p-6 sm:p-8 space-y-6 transition-all">
-              <div className="flex items-center justify-between border-b border-slate-200/80 dark:border-slate-800 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
+            <div className="relative rounded-[32px] bg-white/80 dark:bg-slate-900/85 backdrop-blur-2xl backdrop-saturate-150 border border-white/90 dark:border-slate-800 shadow-[inset_0_2px_4px_0_rgba(255,255,255,1),inset_0_-1px_3px_0_rgba(0,0,0,0.04),0_25px_60px_-15px_rgba(37,99,235,0.12),0_15px_35px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden p-4 sm:p-8 space-y-5 sm:space-y-6 transition-all">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 border-b border-slate-200/80 dark:border-slate-800 pb-4">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                  <div className="flex items-center gap-1.5 shrink-0">
                     <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                   </div>
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-blue-600 dark:text-cyan-400" />
-                      Fee Collection Velocity
+                  <div className="min-w-0">
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white flex items-center gap-1.5 sm:gap-2 leading-tight">
+                      <TrendingUp className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                      <span className="truncate sm:whitespace-normal">Fee Collection Velocity</span>
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 font-normal">Interactive Real-Time Revenue Curve (Hover Points)</p>
+                    <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-normal truncate sm:whitespace-normal">Interactive Real-Time Revenue Curve (Hover Points)</p>
                   </div>
                 </div>
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-100/90 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-700/50 shadow-2xs">
+                <span className="self-start sm:self-auto text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-full bg-emerald-100/90 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-700/50 shadow-2xs shrink-0">
                   CA-Ready Status
                 </span>
               </div>
 
               {/* 4 Stat Boxes with Frosted Glass Styling */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
-                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">Fee Collected</span>
-                  <div className="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">₹42.6L</div>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">+18% vs last term</span>
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
+                <div className="p-3 sm:p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                  <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 block font-medium">Fee Collected</span>
+                  <div className="text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">₹42.6L</div>
+                  <span className="text-[9px] sm:text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">+18% vs last term</span>
                 </div>
-                <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
-                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">Outstanding Dues</span>
-                  <div className="text-2xl font-extrabold text-amber-600 dark:text-amber-400 mt-1">₹18.4L</div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Auto notices queued</span>
+                <div className="p-3 sm:p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                  <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 block font-medium">Outstanding Dues</span>
+                  <div className="text-lg sm:text-2xl font-extrabold text-amber-600 dark:text-amber-400 mt-1">₹18.4L</div>
+                  <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 font-medium">Auto notices queued</span>
                 </div>
-                <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
-                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">Operating Income</span>
-                  <div className="text-2xl font-extrabold text-blue-600 dark:text-cyan-400 mt-1">₹1.20Cr</div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Annual budget</span>
+                <div className="p-3 sm:p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                  <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 block font-medium">Operating Income</span>
+                  <div className="text-lg sm:text-2xl font-extrabold text-blue-600 dark:text-cyan-400 mt-1">₹1.20Cr</div>
+                  <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 font-medium">Annual budget</span>
                 </div>
-                <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
-                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">Expenses & Payroll</span>
-                  <div className="text-2xl font-extrabold text-rose-600 dark:text-rose-400 mt-1">₹76L</div>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Fully reconciled</span>
+                <div className="p-3 sm:p-4 rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-xl border border-white/90 dark:border-slate-700 hover:scale-[1.02] transition-transform">
+                  <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 block font-medium">Expenses & Payroll</span>
+                  <div className="text-lg sm:text-2xl font-extrabold text-rose-600 dark:text-rose-400 mt-1">₹76L</div>
+                  <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 font-medium">Fully reconciled</span>
                 </div>
               </div>
 

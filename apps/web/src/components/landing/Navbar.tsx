@@ -38,8 +38,8 @@ export default function Navbar({ showNavLinks }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/40 dark:bg-slate-950/40 backdrop-blur-md border-b border-slate-200/40 dark:border-slate-800/40 py-3"
-          : "bg-transparent py-5"
+        ? "bg-white/40 dark:bg-slate-950/40 backdrop-blur-md border-b border-slate-200/40 dark:border-slate-800/40 py-3"
+        : "bg-transparent py-5"
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function Navbar({ showNavLinks }: NavbarProps) {
                 </span>
               </div>
               <span className="text-[10px] tracking-wider text-slate-500 dark:text-slate-400 font-semibold uppercase">
-                Institution OS
+                Institution
               </span>
             </div>
           </Link>

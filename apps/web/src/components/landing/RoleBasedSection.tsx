@@ -137,7 +137,7 @@ export default function RoleBasedSection() {
         {/* Interactive 2 Column Grid */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Role Selection Grid (8 Roles) */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-2.5 sm:gap-3">
             {roles.map((r, idx) => {
               const IconComp = r.icon;
               const isSelected = selectedRole === idx;
@@ -145,25 +145,25 @@ export default function RoleBasedSection() {
                 <div
                   key={idx}
                   onClick={() => setSelectedRole(idx)}
-                  className={`p-4 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center gap-3.5 ${
+                  className={`p-2.5 sm:p-4 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center gap-2.5 sm:gap-3.5 ${
                     isSelected
                       ? "bg-gradient-to-r from-blue-600 to-blue-700 border-blue-600 text-white shadow-lg shadow-blue-500/25 scale-[1.02]"
                       : "bg-slate-50 dark:bg-slate-900/80 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 shadow-xs"
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 ${
                       isSelected
                         ? "bg-white/20 text-white"
                         : "bg-white dark:bg-slate-950 text-blue-600 dark:text-cyan-400 border border-slate-200 dark:border-slate-800 shadow-xs"
                     }`}
                   >
-                    <IconComp className="w-5 h-5" />
+                    <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold leading-snug">{r.title}</h4>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-xs sm:text-sm font-bold leading-tight truncate sm:whitespace-normal">{r.title}</h4>
                     <span
-                      className={`text-[10px] block ${
+                      className={`text-[9px] sm:text-[10px] block leading-tight mt-0.5 line-clamp-2 ${
                         isSelected ? "text-blue-100" : "text-slate-500 dark:text-slate-400 font-medium"
                       }`}
                     >
@@ -176,7 +176,7 @@ export default function RoleBasedSection() {
           </div>
 
           {/* Right Role Detail View Box */}
-          <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white shadow-xl relative overflow-hidden">
             <div className="space-y-6">
               <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
                 <div className="flex items-center gap-3">

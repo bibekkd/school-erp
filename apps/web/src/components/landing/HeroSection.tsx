@@ -128,24 +128,24 @@ export default function HeroSection() {
           <div className="relative rounded-[32px] md:rounded-[36px] bg-white/70 dark:bg-slate-900/85 backdrop-blur-2xl backdrop-saturate-150 border border-white/80 dark:border-slate-800 shadow-[inset_0_2px_4px_0_rgba(255,255,255,1),inset_0_-1px_3px_0_rgba(0,0,0,0.04),0_25px_60px_-15px_rgba(37,99,235,0.12),0_15px_35px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden text-left transition-all">
 
             {/* Top Bar of Mockup */}
-            <div className="px-6 py-4 bg-white/40 dark:bg-slate-900/60 backdrop-blur-xl border-b border-white/60 dark:border-slate-800 flex items-center justify-between flex-wrap gap-4">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 bg-white/40 dark:bg-slate-900/60 backdrop-blur-xl border-b border-white/60 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 shrink-0">
                   <div className="w-3 h-3 rounded-full bg-rose-400 shadow-sm" />
                   <div className="w-3 h-3 rounded-full bg-amber-400 shadow-sm" />
                   <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-sm" />
                 </div>
-                <div className="bg-white/60 dark:bg-slate-800/80 backdrop-blur-md border border-white/80 dark:border-slate-700 rounded-full px-4 py-1 shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)] flex items-center gap-2 text-xs font-mono text-slate-600 dark:text-slate-300">
-                  <span className="text-slate-400">🔒</span>
-                  <span>https://app.vexaiq.com/institution-overview</span>
+                <div className="bg-white/60 dark:bg-slate-800/80 backdrop-blur-md border border-white/80 dark:border-slate-700 rounded-full px-3 sm:px-4 py-1 shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)] flex items-center gap-2 text-[10px] sm:text-xs font-mono text-slate-600 dark:text-slate-300 max-w-[200px] sm:max-w-none">
+                  <span className="text-slate-400 shrink-0">🔒</span>
+                  <span className="truncate">https://app.vexaiq.com/institution-overview</span>
                 </div>
               </div>
 
               {/* Tab Selector */}
-              <div className="flex items-center bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-1 rounded-full border border-white/80 dark:border-slate-700 text-xs shadow-inner gap-1">
+              <div className="flex items-center bg-white/60 dark:bg-slate-800/80 backdrop-blur-md p-1 rounded-full border border-white/80 dark:border-slate-700 text-xs shadow-inner gap-1 overflow-x-auto max-w-full min-w-0">
                 <button
                   onClick={() => setActiveTab("overview")}
-                  className={`px-4 py-1.5 rounded-full font-semibold transition-all ${activeTab === "overview"
+                  className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-semibold transition-all text-[11px] sm:text-xs whitespace-nowrap shrink-0 ${activeTab === "overview"
                       ? "bg-blue-600 text-white shadow-[0_2px_10px_rgba(37,99,235,0.35)]"
                       : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                     }`}
@@ -154,7 +154,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("finance")}
-                  className={`px-4 py-1.5 rounded-full font-semibold transition-all ${activeTab === "finance"
+                  className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-semibold transition-all text-[11px] sm:text-xs whitespace-nowrap shrink-0 ${activeTab === "finance"
                       ? "bg-blue-600 text-white shadow-[0_2px_10px_rgba(37,99,235,0.35)]"
                       : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                     }`}
@@ -163,7 +163,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("ai")}
-                  className={`px-4 py-1.5 rounded-full font-semibold transition-all flex items-center gap-1.5 ${activeTab === "ai"
+                  className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-semibold transition-all text-[11px] sm:text-xs whitespace-nowrap shrink-0 flex items-center gap-1.5 ${activeTab === "ai"
                       ? "bg-blue-600 text-white shadow-[0_2px_10px_rgba(37,99,235,0.35)]"
                       : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                     }`}
@@ -175,7 +175,7 @@ export default function HeroSection() {
                 </button>
                 <button
                   onClick={() => setActiveTab("compliance")}
-                  className={`px-4 py-1.5 rounded-full font-semibold transition-all ${activeTab === "compliance"
+                  className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-semibold transition-all text-[11px] sm:text-xs whitespace-nowrap shrink-0 ${activeTab === "compliance"
                       ? "bg-blue-600 text-white shadow-[0_2px_10px_rgba(37,99,235,0.35)]"
                       : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                     }`}
@@ -186,56 +186,56 @@ export default function HeroSection() {
             </div>
 
             {/* Dashboard Content Container */}
-            <div className="p-6 md:p-8 space-y-6">
+            <div className="p-4 sm:p-6 md:p-8 space-y-6">
               {/* Stat Cards Row - Frosted Glass Cards */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                 {/* Total Students */}
-                <div className="p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex items-start gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-blue-100/80 dark:bg-blue-900/40 border border-blue-200/70 dark:border-blue-800/50 text-blue-600 dark:text-cyan-400 flex items-center justify-center shrink-0 shadow-inner">
-                    <Users className="w-5 h-5" />
+                <div className="p-3 sm:p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5">
+                  <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-blue-100/80 dark:bg-blue-900/40 border border-blue-200/70 dark:border-blue-800/50 text-blue-600 dark:text-cyan-400 flex items-center justify-center shrink-0 shadow-inner">
+                    <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Students</div>
-                    <div className="text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">2,340</div>
-                    <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1 mt-1">
-                      <TrendingUp className="w-3 h-3" /> +12% this academic year
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Students</div>
+                    <div className="text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">2,340</div>
+                    <div className="text-[10px] sm:text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1 mt-0.5 sm:mt-1">
+                      <TrendingUp className="w-3 h-3 shrink-0" /> +12% this year
                     </div>
                   </div>
                 </div>
 
                 {/* Attendance Rate */}
-                <div className="p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex items-start gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-emerald-100/80 dark:bg-emerald-900/40 border border-emerald-200/70 dark:border-emerald-800/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-inner">
-                    <Activity className="w-5 h-5" />
+                <div className="p-3 sm:p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5">
+                  <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-emerald-100/80 dark:bg-emerald-900/40 border border-emerald-200/70 dark:border-emerald-800/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-inner">
+                    <Activity className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Attendance Rate</div>
-                    <div className="text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">98.4%</div>
-                    <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-medium">Today &bull; 2,302 Present</div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Attendance Rate</div>
+                    <div className="text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">98.4%</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 font-medium">2,302 Present</div>
                   </div>
                 </div>
 
                 {/* Term Fee Collected */}
-                <div className="p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex items-start gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-purple-100/80 dark:bg-purple-900/40 border border-purple-200/70 dark:border-purple-800/50 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 shadow-inner">
-                    <CreditCard className="w-5 h-5" />
+                <div className="p-3 sm:p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5">
+                  <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-purple-100/80 dark:bg-purple-900/40 border border-purple-200/70 dark:border-purple-800/50 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 shadow-inner">
+                    <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Term Fee Collected</div>
-                    <div className="text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">₹42.6L</div>
-                    <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold mt-1">94% target achieved</div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Term Fee</div>
+                    <div className="text-lg sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">₹42.6L</div>
+                    <div className="text-[10px] sm:text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5 sm:mt-1">94% achieved</div>
                   </div>
                 </div>
 
                 {/* Board Compliance */}
-                <div className="p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex items-start gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-amber-100/80 dark:bg-amber-900/40 border border-amber-200/70 dark:border-amber-800/50 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 shadow-inner">
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="p-3 sm:p-4.5 rounded-2xl bg-white/65 dark:bg-slate-800/60 hover:bg-white/80 dark:hover:bg-slate-800/80 backdrop-blur-xl border border-white/90 dark:border-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5">
+                  <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-amber-100/80 dark:bg-amber-900/40 border border-amber-200/70 dark:border-amber-800/50 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 shadow-inner">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Board Compliance</div>
-                    <div className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-0.5">99.99% CA-Ready</div>
-                    <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-medium">CBSE & RTE Verified</div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Compliance</div>
+                    <div className="text-base sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-0.5 leading-snug sm:leading-normal">99.99% CA-Ready</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 font-medium">CBSE & RTE</div>
                   </div>
                 </div>
               </div>

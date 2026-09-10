@@ -165,11 +165,11 @@ export default function InformationFlowSection() {
         {/* Vertical Scroll-Driven Animated Flowchart Diagram */}
         <div ref={containerRef} className="mt-16 relative">
           {/* Central Vertical Connector Base Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-8 bottom-12 w-1 bg-slate-200 dark:bg-slate-800 rounded-full" />
+          <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 top-8 bottom-12 w-1 bg-slate-200 dark:bg-slate-800 rounded-full" />
 
           {/* Scroll-Driven Progressive Beam Fill Line */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 top-8 w-1 bg-gradient-to-b from-blue-600 via-blue-500 to-cyan-500 rounded-full transition-all duration-300 ease-out shadow-[0_0_12px_rgba(37,99,235,0.6)]"
+            className="absolute left-6 sm:left-1/2 -translate-x-1/2 top-8 w-1 bg-gradient-to-b from-blue-600 via-blue-500 to-cyan-500 rounded-full transition-all duration-300 ease-out shadow-[0_0_12px_rgba(37,99,235,0.6)]"
             style={{
               height: `${scrollProgress}%`,
             }}
@@ -197,14 +197,14 @@ export default function InformationFlowSection() {
                 >
                   {/* Central Node Circle */}
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 z-20 flex items-center justify-center ${
-                      step.align === "center" ? "-top-5" : "top-1/2 -translate-y-1/2"
+                    className={`absolute left-6 sm:left-1/2 -translate-x-1/2 z-20 flex items-center justify-center ${
+                      step.align === "center" ? "top-1/2 -translate-y-1/2 sm:-top-5" : "top-1/2 -translate-y-1/2"
                     }`}
                   >
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-xs transition-all duration-500 ${
+                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-extrabold text-xs transition-all duration-500 ${
                         isActive
-                          ? "bg-blue-600 text-white ring-8 ring-blue-500/25 scale-125 shadow-lg shadow-blue-500/40"
+                          ? "bg-blue-600 text-white ring-6 sm:ring-8 ring-blue-500/25 scale-110 sm:scale-125 shadow-lg shadow-blue-500/40"
                           : isPast
                           ? "bg-blue-700 dark:bg-cyan-500 text-white ring-4 ring-blue-200 dark:ring-cyan-950"
                           : "bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 shadow-sm"
@@ -216,43 +216,43 @@ export default function InformationFlowSection() {
 
                   {/* Step Card Container */}
                   <div
-                    className={`w-full sm:w-[45%] p-5 sm:p-6 rounded-2xl border backdrop-blur-xl transition-all duration-500 ${
+                    className={`w-[calc(100%-3.5rem)] ml-14 sm:ml-0 sm:w-[45%] p-4 sm:p-6 rounded-2xl border backdrop-blur-xl transition-all duration-500 ${
                       isActive
-                        ? "bg-white dark:bg-slate-900 border-blue-400 dark:border-cyan-400 shadow-xl scale-[1.03] text-slate-900 dark:text-white"
+                        ? "bg-white dark:bg-slate-900 border-blue-400 dark:border-cyan-400 shadow-xl scale-[1.02] sm:scale-[1.03] text-slate-900 dark:text-white"
                         : isPast
                         ? "bg-white/90 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 shadow-sm"
                         : "bg-white/60 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 opacity-70 hover:opacity-100"
                     } ${
                       step.align === "left"
-                        ? "sm:mr-auto sm:text-right"
+                        ? "sm:mr-auto text-left sm:text-right"
                         : step.align === "right"
-                        ? "sm:ml-auto sm:text-left"
-                        : "sm:mx-auto sm:text-center mt-12 pt-8 sm:w-[60%]"
+                        ? "sm:ml-auto text-left"
+                        : "sm:mx-auto text-left sm:text-center mt-0 sm:mt-12 pt-4 sm:pt-8 sm:w-[60%]"
                     }`}
                   >
                     <div
-                      className={`flex items-center gap-3 mb-2 ${
+                      className={`flex items-center gap-2.5 sm:gap-3 mb-2 ${
                         step.align === "left"
-                          ? "sm:flex-row-reverse"
+                          ? "flex-row sm:flex-row-reverse"
                           : step.align === "center"
-                          ? "justify-center"
+                          ? "flex-row sm:justify-center"
                           : "flex-row"
                       }`}
                     >
                       <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center shrink-0 ${
                           isActive
                             ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-cyan-300 border border-blue-200 dark:border-blue-800"
                             : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
                         }`}
                       >
-                        <IconComp className="w-4 h-4" />
+                        <IconComp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                       <div>
                         <span className="text-[10px] font-mono uppercase tracking-wider text-blue-700 dark:text-cyan-400 font-bold block">
                           {step.badge}
                         </span>
-                        <h3 className="text-base font-extrabold text-slate-900 dark:text-white">
+                        <h3 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white leading-tight">
                           {step.title}
                         </h3>
                       </div>
